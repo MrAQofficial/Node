@@ -78,37 +78,37 @@ const route = express.Router();
 //     console.log(a+b);
 // })
 
-// // Starting Express JS
-// const app = express();
-// app.set('view engine', 'ejs');
+// Starting Express JS
+const app = express();
+app.set('view engine', 'ejs');
 
-// const pubDir = path.join(__dirname, 'public')
-// // app.use(express.static(pubDir));
+const pubDir = path.join(__dirname, 'public')
+// app.use(express.static(pubDir));
 
-// route.use(ageFilter);
-// //Routes
-// app.get('', (req, res) => {
-//     res.render('index')
-// })
-// app.get('/about', (req, res) => {
-//     res.sendFile(`${pubDir}/about.html`)
-// })
-// app.get('/profile', (req, res) => {
-//     const user = {
-//         name: 'Aqib',
-//         email: 'work@getMaxListeners.com'
-//     }
-//     res.render('profile', { user })
-// })
-// route.get('/login', (req, res) => {
-//     res.render('login')
-// })
-// app.use('/', route);
+route.use(ageFilter);
+//Routes
+app.get('', (req, res) => {
+    res.render('index')
+})
+app.get('/about', (req, res) => {
+    res.sendFile(`${pubDir}/about.html`)
+})
+app.get('/profile', (req, res) => {
+    const user = {
+        name: 'Aqib',
+        email: 'work@getMaxListeners.com'
+    }
+    res.render('profile', { user })
+})
+route.get('/login', (req, res) => {
+    res.render('login')
+})
+app.use('/', route);
 
-// app.get('*', (req, res) => {
-//     res.sendFile(`${pubDir}/404.html`)
-// })
-// app.listen(3030);
+app.get('*', (req, res) => {
+    res.sendFile(`${pubDir}/404.html`)
+})
+app.listen(3030);
 
 // // Starting MongoDB
 // const dbConnect = require('./dbConnect');
@@ -127,27 +127,26 @@ const route = express.Router();
 // }
 // main();
 
-const dbConnect = require('./dbConnect');
-const { name } = require('ejs');
 
-const inn = async () => {
-    const db = await dbConnect();
-    // console.log(db);
-    const insert1 = await db.insertMany([
-        
-            {
-                id: '12',
-                name: 'newdata',
-                email: 'newemail'
-            },
+// Insert Function
+// const dbConnect = require('./dbConnect');
+// const { name } = require('ejs');
+// const inn = async () => {
+//     const db = await dbConnect();
+//     // console.log(db);
+//     const insert1 = await db.insertMany([
+//             {
+//                 id: '12',
+//                 name: 'newdata',
+//                 email: 'newemail'
+//             },
 
-            {
-                id: '14',
-                name: 'newdata',
-                email: 'newemail'
-            }]
-        
-    );
-    console.log(insert1);
-}
-inn();
+//             {
+//                 id: '14',
+//                 name: 'newdata',
+//                 email: 'newemail'
+//             }
+//         ]);
+//     console.log(insert1);
+// }
+// inn();

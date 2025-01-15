@@ -1,9 +1,11 @@
 // MiddleWare Here
 const ageFilter = (req, res, next) => {
     if (!req.query.age) {
-        res.render('ageError')
+        // res.render('ageError')
+        next()
     } else if (req.query.age < 18) {
-        res.render('underAge')
+        // res.render('underAge')
+        next()
     } else {
         next();
     }
