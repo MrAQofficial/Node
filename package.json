@@ -1,0 +1,19 @@
+{
+  "name": "learn-node",
+  "version": "1.0.0",
+  "description": "This is my first app of node. And I am starting node js from zero.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "learn-node"
+  ],
+  "author": "Aqib Hassan",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mongodb": "^6.6.1"
+  }
+}
