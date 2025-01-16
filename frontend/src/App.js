@@ -12,6 +12,8 @@ function App() {
       <Route path="/update" element={<h1>Update product</h1>}  />
       <Route path="/logOut" element={<h1>Logout</h1>}  />
       <Route path="/profile" element={<h1>Profile</h1>}  />
+      
+      
     </Routes>
     </BrowserRouter>
     
