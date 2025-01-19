@@ -4,7 +4,7 @@ const nodedb = 'nodedb';
 const client = new MongoClient(url);
 
 
-async function dbConnect() {
+const dbConnect = async () => {
     const result = await client.connect();
     const db = result.db(nodedb)
     const collection = db.collection('products')
